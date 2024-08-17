@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="condamnations_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8a3a902-3d90-4a77-8bba-3dce594ca4e0">
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="niciv" class="java.lang.String"/>
+	<parameter name="prenom" class="java.lang.String"/>
+	<parameter name="nom" class="java.lang.String"/>
+	<parameter name="telephone" class="java.lang.String"/>
+	<parameter name="civilite" class="java.lang.String"/>
+	<parameter name="prenomPere" class="java.lang.String"/>
+	<parameter name="nomMere" class="java.lang.String"/>
+	<parameter name="prenomMere" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.util.Date"/>
+	<parameter name="region" class="java.lang.String"/>
+	<parameter name="cercle" class="java.lang.String"/>
+	<parameter name="profession" class="java.lang.String"/>
+	<parameter name="commune" class="java.lang.String"/>
+	<parameter name="adresse" class="java.lang.String"/>
+	<parameter name="regionA" class="java.lang.String"/>
+	<parameter name="cercleA" class="java.lang.String"/>
+	<parameter name="communeA" class="java.lang.String"/>
+	<parameter name="lieuNaissance" class="java.lang.String"/>
+	<parameter name="toDay" class="java.util.Date"/>
+	<parameter name="numero" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="juridiction" class="java.lang.String"/>
+	<field name="natureDelitCrime" class="java.lang.String"/>
+	<field name="quantum" class="java.lang.String"/>
+	<field name="dateCondamnation" class="java.util.Date"/>
+	<field name="dateDetention" class="java.util.Date"/>
+	<field name="dateDelitCrime" class="java.util.Date"/>
+	<field name="citoyen" class="java.lang.Long"/>
+	<title>
+		<band height="371">
+			<staticText>
+				<reportElement x="70" y="250" width="110" height="20" uuid="aae96f26-bbde-45fa-9a1d-007d5da3855e"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Et de :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="190" width="111" height="20" uuid="f8f227b8-d89b-4930-9e36-026069061359"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Né(e) le : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="190" width="330" height="20" uuid="64c62c0a-e2dd-4592-b74b-5fe9aafdb2ea"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd-MM-yyyy").format($P{dateNaissance})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-10" width="170" height="20" uuid="ed6470c4-086b-4397-b59e-83b75e9939ae"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[COUR D'APPEL DU MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="140" width="470" height="20" uuid="a25c36c7-368b-49a3-bbe6-1272bae42036"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELEVE DES BULLETINS CONERNANT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="170" height="20" uuid="3ea54d17-5933-4b45-828d-fd6808a9af76"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="270" width="110" height="20" uuid="4e0c5f01-fe83-4e28-b862-40f0f7d8e425"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situation de famille :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="330" width="330" height="20" uuid="c87b6b7c-9543-46a6-a827-e9ef10216f5d"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Malienne]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="310" width="111" height="20" uuid="96065d1c-daee-47bc-843a-a51cd5e80b6a"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Domicile :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="310" width="330" height="20" uuid="33dcf801-b853-429c-97cd-73cabed51790"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{commune}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="30" height="20" uuid="1921d4cf-fff2-4aac-8e75-108d01f7bcc9"/>
+				<textElement textAlignment="Right">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="230" width="110" height="20" uuid="cd7fe3ff-84b2-4c76-861f-900d367fc984"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fils (lle) de :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="250" width="330" height="20" uuid="6efbbebf-1bf6-4b2c-beb7-0710e6fe8a0f"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenomMere}+" "+$P{nomMere}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="100" width="552" height="30" backcolor="#D5E8F5" uuid="98cdf01d-294c-445b-ac36-926a8fa348b9"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BULLETIN  DU  CASIER  JUDICIAIRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="210" width="111" height="20" uuid="8e28ccbf-2bae-483e-92c3-43593b93ef19"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="290" width="330" height="20" uuid="835e42ce-6525-40f1-a693-2f52e4b1ccdd"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profession}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="70" width="80" height="20" uuid="3ea4ae90-18b9-4f90-97ed-80e67a7dc151"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="210" width="330" height="20" uuid="c1437c6d-c7f4-414a-be0d-effa7bfbc6c1"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cercleA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="330" width="111" height="20" uuid="358e648a-61ab-4a0a-b4f1-f0fdbb4d7cbb"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nationalité :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="170" width="111" height="20" uuid="74c1bb29-4ce7-4d40-ba41-dacd4c64814a"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prénom(s)  et Nom :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="181" y="230" width="329" height="20" uuid="e091105c-b50d-458a-a405-78de530d19af"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenomPere}+" "+$P{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="290" width="110" height="20" uuid="59273d48-16ef-4fa6-b585-3a5fb3cf699d"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profession :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="270" width="330" height="20" uuid="306134fa-1b9a-4dae-9ed7-df2445d7d311"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{civilite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="170" height="20" uuid="8871d346-aeea-4891-b3bb-a579f67f6f68"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TRIBUNAL DE GRANDE INSTANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="70" width="60" height="20" uuid="a6b52c88-03cc-426c-80cb-a2fae7559b6f"/>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/Greffe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="170" height="20" uuid="245bf33b-6982-48dd-8c06-234f99ec4cf6"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="170" width="330" height="20" uuid="119a48c3-1a2f-499e-ad96-9d6eee740ae9"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenom} +"  "+ $P{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="30" width="164" height="20" uuid="7c4fc8dc-1747-4201-9028-48ac3abf62e0"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[UN PEUPLE - UN BUT -  UNE FOI   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="50" width="164" height="20" uuid="dffa0fc1-ee5d-409c-80b7-483a4b01fad6"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[=*=*=*=*=*=*=*=*=*=*=]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="-10" width="164" height="20" uuid="1b197180-1e18-4e83-a853-4f1a0b422f74"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DU MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="10" width="165" height="20" uuid="8a0440ba-f1d9-43ba-980e-84965e5b781a"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-o-o-o-o-o-o-o-o-o-o-o-o-]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="46">
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="1" width="110" height="40" backcolor="#D5E8F5" uuid="5e95c9c6-23e7-429e-b1b1-3f51b1f6a2a2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Juridiction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="115" height="40" backcolor="#D5E8F5" uuid="80a16d59-9f1c-40b0-bc0e-b4c614f4b2e1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nature Crimes ou Délits]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="40" backcolor="#D5E8F5" uuid="25476a24-4de7-4b47-b76f-47b168c7e2b2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Condamnation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="395" y="1" width="75" height="38" backcolor="#D5E8F5" uuid="1a6f6764-3f21-4f65-b7bb-72c447d3b16b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Détention]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="190" y="0" width="90" height="40" backcolor="#D5E8F5" uuid="2f9a5c60-f11e-49ba-bc87-5f47b9a12f1c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date Crimes ou Délits]]></text>
+			</staticText>
+			<line>
+				<reportElement mode="Opaque" x="0" y="40" width="555" height="1" backcolor="#D5E8F5" uuid="a28c0a02-77c9-4d72-9110-394202aa2b71"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="fc5c2ed9-5317-4e1e-b1ae-fc2156808f7e"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="1" height="40" uuid="f5e2b35e-2a3a-4e67-96ad-7b8b00d4aeba"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="79" y="1" width="1" height="38" uuid="addb2b9e-1d27-4aa1-85b5-0e41b3f81a34"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="280" y="0" width="1" height="39" uuid="96700b1b-8df0-4d52-80e8-10d940f3d4a4"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="395" y="0" width="1" height="39" uuid="cb92e599-7156-444f-8a2d-9b81de7bb34a"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="40" uuid="97169607-b6eb-4fba-87a7-ea68e28e08c3"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="190" y="0" width="1" height="40" uuid="c7874c56-e588-48fb-92dc-9e831cf94174"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="471" y="1" width="84" height="38" backcolor="#D5E8F5" uuid="2641d89f-9501-4cd8-8f2a-3f84bf8b7d19"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Quantum de la peine]]></text>
+			</staticText>
+			<line>
+				<reportElement x="470" y="0" width="1" height="39" uuid="7b4a25cf-8a95-452d-9b37-e1e9277867f3"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<textField>
+				<reportElement x="80" y="2" width="110" height="20" uuid="580263ac-716f-4f47-9ff4-5303fa4bb484"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{juridiction}==null ? "NEANT" : $F{juridiction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="2" width="113" height="20" uuid="7c4ff04c-9c89-49a9-841e-5c4ecfb71f9a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{natureDelitCrime}== null ? "NEANT" : $F{natureDelitCrime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="1" width="77" height="20" uuid="f02556ee-736c-4341-9fc4-e7833d6851e3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dateCondamnation}== null ? "NEANT" : new SimpleDateFormat("dd-MM-yyyy").format($F{dateCondamnation})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="74" height="20" uuid="8ae1fb9e-6a00-4999-a990-122e3d1d9871"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dateDetention} == null ? "NEANT" :new SimpleDateFormat("dd-MM-yyyy").format($F{dateDetention})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="0" width="91" height="20" uuid="ae169b64-232c-4cfe-aeb3-7834e5cfc87d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dateDelitCrime} == null ? "NEANT" :new SimpleDateFormat("dd-MM-yyyy").format($F{dateDelitCrime})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="9f269fa8-f056-422e-8e68-918fb9f6f1b4"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="554" height="1" uuid="dbc0aabb-ece2-4c7d-8d0e-c7d37a67a5a4"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20" uuid="5fa09e53-f9c5-4077-9383-df195d8e74c1"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="280" y="0" width="1" height="20" uuid="13ba28b1-e87e-44b7-b78c-3e5a4dbf687e"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="395" y="0" width="1" height="20" uuid="0e2e8a10-0e37-49f2-82d0-d99459ccdd95"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="20" uuid="2cb302da-a4e6-430d-89d4-9eeaa01c2643"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="471" y="0" width="83" height="20" uuid="740f12e7-9263-443a-a988-a0c13e777617"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quantum} == null ? "NEANT" :$F{quantum}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="470" y="1" width="1" height="20" uuid="c2f422c1-a445-4217-a8f6-093fae234ec6"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="190" y="0" width="1" height="20" uuid="83801019-f610-4168-8dd1-cafaebc749b4"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="79" y="0" width="1" height="20" uuid="3472033a-c08b-4b4e-9a74-c93e2115ed2c"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="330">
+			<staticText>
+				<reportElement x="400" y="28" width="40" height="20" uuid="ead82d3f-ebc6-43db-97f5-8d8e0e6c776d"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mali, le ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="58" width="210" height="20" uuid="088ad5bc-a4d8-41e0-8857-c105ea37ce0f"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LE PROCUREUR DE LA REPUBLIQUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="3" width="111" height="20" uuid="64468528-bf72-43d6-bce2-d98c3f20d7ef"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VU AU PARQUET]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="440" y="28" width="90" height="20" uuid="1845395d-b696-46cd-b9d3-525790c44a11"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="8" width="155" height="20" uuid="616efb98-04e4-4558-8cfd-85fc979f9afb"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[POUR RELEVE COMFORME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="60" width="154" height="20" uuid="cef67e45-a4c2-44cb-b96d-e532f81e7e90"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LE GREFFIER EN CHEF]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

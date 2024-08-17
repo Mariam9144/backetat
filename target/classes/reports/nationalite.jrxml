@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecuCitoyen" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abc12345-6789-def0-1234-56789abcdef0">
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="niciv" class="java.lang.String"/>
+	<parameter name="prenom" class="java.lang.String"/>
+	<parameter name="nom" class="java.lang.String"/>
+	<parameter name="telephone" class="java.lang.String"/>
+	<parameter name="civilite" class="java.lang.String"/>
+	<parameter name="prenomPere" class="java.lang.String"/>
+	<parameter name="nomMere" class="java.lang.String"/>
+	<parameter name="prenomMere" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.util.Date"/>
+	<parameter name="region" class="java.lang.String"/>
+	<parameter name="cercle" class="java.lang.String"/>
+	<parameter name="profession" class="java.lang.String"/>
+	<parameter name="commune" class="java.lang.String"/>
+	<parameter name="adresse" class="java.lang.String"/>
+	<parameter name="regionA" class="java.lang.String"/>
+	<parameter name="cercleA" class="java.lang.String"/>
+	<parameter name="communeA" class="java.lang.String"/>
+	<parameter name="lieuNaissance" class="java.lang.String"/>
+	<parameter name="toDay" class="java.util.Date"/>
+	<parameter name="numero" class="java.lang.Long"/>
+	<background>
+		<band height="6"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="115" y="195" width="340" height="340" uuid="d7e08031-ad53-4009-b8fa-905071e6f7d4"/>
+				<imageExpression><![CDATA["reports/images/imageedit_49_8113812636.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-5" y="5" width="120" height="120" uuid="c4372380-206e-47a5-8c2f-1e8d8fb9a6b2"/>
+				<imageExpression><![CDATA["reports/images/bande-en-oblique.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="115" y="5" width="170" height="20" uuid="c30085b2-4e44-49d1-8e32-a9909cf08d83"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[COUR D'APPEL DU MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="45" width="170" height="20" uuid="33588e03-9493-4d1c-920f-16fde53ea1c8"/>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[..........................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="25" width="170" height="30" uuid="485925a0-b85c-4ef2-8e6e-1c39db8d543c"/>
+				<textElement textAlignment="Left">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TRIBUNAL DE GRANDE INSTANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="45" width="145" height="20" uuid="cc6628ab-4eba-414e-ad23-e96b0c5dd192"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[......................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="25" width="145" height="20" uuid="d63231c2-c007-4de2-984e-53de298bc790"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[UN PEUPLE - UN BUT -  UNE FOI   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="5" width="146" height="20" uuid="674de66b-a702-4e48-b5eb-c3242fc2e83e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DU MALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="130" width="70" height="20" uuid="67f384d0-3460-434e-ac1e-1f532ec1ab8a"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/ T G I   ML]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="130" width="90" height="20" uuid="b0f73fef-14d9-4a95-a9e9-64d8561b5e8f"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="130" width="30" height="20" uuid="02e9d3be-b4d0-4a1e-8d72-040ee8eb3f2c"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="160" width="466" height="40" uuid="6764121d-24cc-41f4-95c3-f42f12b2523d"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[LE PRESIDENT DU TRIBUNAL DE GRANDE INSTANCE CERTIFIE QUE LA PERSONNE DENOMMEE CI-APRES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="320" width="290" height="20" uuid="c0571189-c763-4cb6-bab3-930e2dfcd4a4"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cercleA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="380" width="110" height="20" uuid="cece7fb6-00cb-45fc-8c7b-d68b1df2e9bb"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFESSION :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="420" width="111" height="20" uuid="27ed0677-6dac-483f-a6e1-77be55cc3476"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOMICILE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="340" width="290" height="20" uuid="98927779-a5ad-4a82-a8b6-6c2b94a0e79a"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenomPere}+" "+$P{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="109" y="400" width="141" height="20" uuid="a3d51fa4-724c-483a-9754-c2f8f4c32384"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SITUATION DE FAMILLE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="400" width="290" height="20" uuid="56b19e42-e266-4b86-a340-a1a609270b60"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{civilite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="360" width="290" height="20" uuid="282d5f63-ca50-49a8-80d7-f8015f81f11c"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenomMere}+" "+$P{nomMere}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="360" width="110" height="20" uuid="34ae656f-42f6-494d-b658-338bf1561dcc"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ET DE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="280" width="290" height="20" uuid="e6726e42-cf36-438c-9c39-cd51a3e7e007"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="340" width="110" height="20" uuid="102709ab-7af1-4644-868c-fcc0df0f6545"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="380" width="290" height="20" uuid="3d630c9d-6c89-423e-a4be-849ef8fdc148"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profession}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="139" y="320" width="111" height="20" uuid="59ab626a-9a1e-4a95-97f0-f2feb7aa21b7"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="260" width="111" height="20" uuid="a13ad0fe-40ec-4daa-ae49-95922acafe98"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRENOM (S) :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="260" width="290" height="20" uuid="58450344-cf0d-4044-8fcc-c7add7513ff0"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prenom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="139" y="280" width="111" height="20" uuid="297aac7d-afe3-4ffe-9093-724656feb7c9"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOM :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="420" width="290" height="20" uuid="925cc099-200e-402d-b3bf-6abcd14a4238"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{commune}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="139" y="300" width="111" height="20" uuid="5e412533-bd91-45a6-8d7a-cc4c6686b8eb"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NE (E) LE : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="300" width="290" height="20" uuid="061d86df-9521-4235-9734-fba93df84aba"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd-MM-yyyy").format($P{dateNaissance})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="550" width="466" height="50" uuid="2d889053-6323-412d-bc15-f9896bc9c314"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[EST DE NATIONALITE MALIENNE EN VERTU DES ARTICLES 263 ET SUIVANTS DE LA LOI N° 2011-087 DU 30 DECEMBRE 2011 PORTANT CODE DES PERSONNES ET DE LA FAMILLE DU MALI.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="447" y="657" width="110" height="20" uuid="5c5f83cf-e147-45c8-b509-41d02ff95742"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format($P{toDay})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="397" y="657" width="50" height="20" uuid="7055630d-9a3f-4825-a1b7-7a961ca5a9bd"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Mali , le ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="95" width="451" height="30" uuid="7bfbbb6f-8700-4d43-a603-a1be21c2b952"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICAT DE NATIONALITE MALIENNE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="620" width="188" height="18" uuid="44228167-234e-41dc-8f73-088b93aa7e83"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[LE PRESIDENT DU TRIBUNAL]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
